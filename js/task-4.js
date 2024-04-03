@@ -7,13 +7,16 @@ function getShippingCost(country) {
     case 'China':
       price = 100;
       return `Shipping to ${country} will cost ${price} credits`;
-
+    //   return message;
+    //   break;
     case 'Chile':
       price = 250;
       return `Shipping to ${country} will cost ${price} credits`;
+    //   break;
     case 'Australia':
       price = 170;
       return `Shipping to ${country} will cost ${price} credits`;
+    //   break;
     case 'Jamaica':
       price = 120;
       return `Shipping to ${country} will cost ${price} credits`;
@@ -22,8 +25,8 @@ function getShippingCost(country) {
       return 'Sorry, there is no delivery to your country';
   }
 }
-//  Чому в return не можна просто поставити message? повертає undefined для price.
-//  Чи треба break? Якщо return, то він стає напівпрозорим.
+//  Чому в return не можна просто поставити message? повертає undefined для price. (рядки 5 і 10).
+//  Чи треба break? Якщо є return, то break стає напівпрозорим.
 
 console.log(getShippingCost('Australia')); // "Shipping to Australia will cost 170 credits"
 console.log(getShippingCost('Germany')); // "Sorry, there is no delivery to your country"
